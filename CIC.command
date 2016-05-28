@@ -1,6 +1,10 @@
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import os
 import sys
+# Prevent path error.By ZYunH.
+CIC_path = os.path.dirname(sys.argv[0])
+os.chdir(CIC_path)
 
 def text_read(filename):
     try:
