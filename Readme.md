@@ -1,6 +1,6 @@
 ## Introduction:
 
-​	This is a simplel tool used to convert a python script(e.g. demo.py) convert into a executable file(only for mac)
+​	This is a simplel tool used to convert a python script(e.g. demo.py) into a executable file(only for mac)
 
 ## Usage:
 
