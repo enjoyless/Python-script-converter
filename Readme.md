@@ -8,6 +8,7 @@ Before use it, you should ensure:
 
 - You're using Mac OS.
 - The python on your system is same version as on your scripts.
+- CIC.command and your python script In the same directory.
 
 Here is how to use it:
 
@@ -29,6 +30,7 @@ Here is how to use it:
 
 - 你的系统是Mac OS。
 - 系统中的python版本和脚本中的python版本一致。
+- CIC.command 与你需要转换的脚本位于同一目录。
 
 这里是使用说明：
 
