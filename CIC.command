@@ -6,7 +6,6 @@ import sys
 CIC_path = os.path.dirname(sys.argv[0])
 os.chdir(CIC_path)
 
-
 def text_read(filename):
     result = []
 
@@ -35,9 +34,9 @@ def add(content, file_name):
     import_sys_key = 1
 
     for i in content:
-        if i == 'import os':
+        if i.replace(' ','') == 'importos':
             import_os_key = 0
-        if i == 'import sys':
+        if i.replace(' ','') == 'importsys':
             import_sys_key = 0
 
     if import_os_key or import_sys_key:
@@ -87,8 +86,17 @@ def modify_permissions(name):
 
     os.system('chmod +x %s' % name_change)
 
+def introduction():
+    print 'Introduction:'
+    print 'CIC is a tiny tool used to convert a python script into a executable file.'
+    print '1.It will not change your original  script at the same time(only for mac)'
+    print '2.Before use it, please make sure the python on your system is same version as on your scripts!'
 
-file_name = raw_input('Filename :')
+try:
+    file_name = sys.argv[1]
+except IndexError:
+    introduction()
+    file_name = raw_input('Please input filename :').replace(' ','')
 
 content = text_read(file_name)
 
