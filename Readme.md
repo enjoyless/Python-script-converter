@@ -1,90 +1,128 @@
+# **Python-script-converter**
+
+[![PyPI](https://img.shields.io/pypi/v/yagmail.svg?style=flat-square)]()
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)]()
+
+页面下方有中文介绍！
+
 ## Introduction:
 
-​	This is a tiny tool used to convert a python script(e.g. demo.py -> demo.command) to a executable file(only for mac),so that you are able to use it anywhere.
+​	This is a tiny tool used to convert a python script(e.g. demo.py -> demo.command) to a executable file(For mac and Linux),so that you are able to use it anywhere.
+
+## Installation
+
+Tip: Add #!/usr/bin/env python or #!/usr/bin/env python3 in  first line of your script to specify interpreter.So you do not need add python version when you use psc.
+
+### Option 1:Install via pip（Better）
+
+```
+$ pip3 install python-script-converter
+```
+
+you can also use pip.
+
+### Option 2:Download from Github
+
+You may either download the stable (identical with the latest release on PyPI) or the master branch of you-get. Unzip it, and put the directory containing the you-get script into your PATH.
+
+```
+$ [sudo] python3 setup.py install
+```
+
+you can also use python.
 
 ## Usage:
 
 Before use it, you should ensure:
 
-- You're using Mac OS.
-- The python on your system is same version as on your scripts.
+- You're using Mac OS or Linux.
 
-Here's' how you use `CIC`  to create a new executable file base on you original script :
+Here's' how you use `psc`  to create a new executable file base on you original script :
 
-- #### Simple way:
-
-  ​	Firstly,open a terminal to elevate the permission of **CIC.command** .Concrete methods are:
-
-  ```
-  $ cd [where the CIC.command is located]
-  $ chmod +x CIC.command
-  ```
-
-  ​	then,Double-click to open  **CIC.command** . Enter the file name of  your python script(or path).then,you can get a executable file,its name is the same as your script,but its extension is **.command**. and what's more,**it will not change your original  script**.
-
-  Interestingly，you can also use CIC.py to convert itself into a executable file,then you can get a file ,the same as CIC.command .
-
-- #### In terminal:
-
-Please change your current working directory to the directory where the CIC.py  is located.replace demo.py with your script name.don't forget to add extension.
+#### If your script based on python3.x
 
 ```
-$ python CIC.py demo.py
+$ psc test.py
 ```
 
-you can also use:
+Or use abspath.
 
 ```
-$ python CIC.py
+$ psc /Users/zyh/test.py
 ```
 
-you can use it to get more info.
+#### If your script based on python2.x
 
-Operating environment : Mac OS 10.11 ,python 2.7.11 .
+```
+$ psc test.py 2
+```
 
+or
 
+```
+$ psc /Users/zyh/test.py 2
+```
+
+then,you can get a executable file,its name is the same as your script,but its extension is **.command**. and what's more,**it will not change your original script**.
 
 ## 介绍：
 
-​	这是一个简单的工具，作用是将一个python脚本直接转换为可执行文件(只供mac系统使用)。如此，你可以在系统的任何地方运行这个脚本。
+​	这是一个简单的工具，作用是将一个python脚本直接转换为可执行文件(只供mac和Linux系统使用)。如此，你可以在系统的任何地方运行这个脚本。
+
+## 安装
+
+注:可在你的脚本程序首行加入#!/usr/bin/env python 或者#!/usr/bin/env python3 来指定解释器。这样使用psc时不需要指定版本号。
+
+### Option 1:通过pip安装（推荐）
+
+```
+$ pip3 install python-script-converter
+```
+
+你也可以使用pip
+
+### Option 2:从Github从下载最新版本
+
+解压下载的zip文件，然后切换到解压后的目录
+
+```
+$ [sudo] python3 setup.py install
+```
+
+你也可以使用python
 
 ## 如何使用：
 
 使用之前，你必须确保：
 
-- 你的系统是Mac OS。
-- 系统中的python版本和脚本中的python版本一致。
+- 你的系统是Mac OS 或者LInux
 
-#### 简单的方法:
+下面演示如何使用 `psc`  来将一个脚本转换至可执行程序
 
-​	首先，你需要提升CIC.command的权限来打开它。
-
-```
-$ cd [将方框和方框内的内容替换为CIC.command的目录]
-$ chmod +x CIC.command
-```
-
-​	然后，双击打开CIC.command文件。输入你需要转换的文件名（或者路径）。之后，你就可以得到一个与脚本名字相同，但是扩展名不同的可执行文件。程序不会改变你原来的脚本文件。
-
-#### 使用终端:
-
-​	或者你也可以使用CIC.py来实现文件转换。
-
-- 请切换到CIC.py的目录，使用如下命令:
+#### 如果你的脚本基于python3.x
 
 ```
-$ python CIC.py demo.py
+$ psc test.py
 ```
 
-- 你也可以使用：
+或者使用绝对路径
 
 ```
-$ python CIC.py
+$ psc /Users/zyh/test.py
 ```
 
-程序会进一步提示输入文件名并输出更多信息。
+#### 如果你的脚本基于python2.x
 
-​	有趣的是，你可以使用CIC.py将其自身转换为可执行文件。得到的可执行文件和CIC.command相同。
+```
+$ psc test.py 2
+```
 
-​	运行环境:Mac OS 10.11,python 2.7.11。
+or
+
+```
+$ psc /Users/zyh/test.py 2
+```
+
+之后，你就可以得到一个与脚本名字相同，但是扩展名不同的可执行文件。**程序不会改变你原来的脚本文件**。
 
