@@ -1,10 +1,9 @@
 # **Python-script-converter**
 
 [![PyPI](https://img.shields.io/pypi/v/yagmail.svg?style=flat-square)]()
-
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)]()
 
-页面下方有中文介绍！
+**页面下方有中文介绍**
 
 ## Introduction:
 
@@ -125,4 +124,3 @@ $ psc /Users/zyh/test.py 2
 ```
 
 之后，你就可以得到一个与脚本名字相同，但是扩展名不同的可执行文件。**程序不会改变你原来的脚本文件**。
-
